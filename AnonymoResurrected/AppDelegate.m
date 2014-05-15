@@ -7,13 +7,37 @@
 //
 
 #import "AppDelegate.h"
+#import "Utility.h"
+#import "Constants.h"
+
+#define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    NSLog(@"");
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+//    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
+//    {
+//        [[UINavigationBar appearance] setTintColor:[UIColor colorWith256RBGAArray:kDarkestGrayColor]];
+//        [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWith256RBGAArray:kOrangeColor]];
+//    }
+//    else
+//    {
+//        [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackTranslucent];
+//        [[UINavigationBar appearance] setTintColor:[UIColor colorWith256RBGAArray:kOrangeColor]];
+//        
+//        [[UITabBar appearance] setBarStyle:UIBarStyleBlack];
+//        [[UITabBar appearance] setBarTintColor:[UIColor colorWith256RBGAArray:kDarkestGrayColor]];
+//        [[UITabBar appearance] setTintColor:[UIColor colorWith256RBGAArray:kOrangeColor]];
+//        
+//        self.window.tintColor = [UIColor colorWith256RBGAArray:kOrangeColor];
+//        self.window.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
+//    }
+//
+    
     // Override point for customization after application launch.
     return YES;
 }
