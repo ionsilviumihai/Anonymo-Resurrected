@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		419575961924AEAA0023480D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 419575951924AEAA0023480D /* Foundation.framework */; };
+		419575981924AEAA0023480D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 419575971924AEAA0023480D /* CoreGraphics.framework */; };
+		4195759A1924AEAA0023480D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 419575991924AEAA0023480D /* UIKit.framework */; };
+		419575A01924AEAA0023480D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4195759E1924AEAA0023480D /* InfoPlist.strings */; };
+		419575A21924AEAA0023480D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 419575A11924AEAA0023480D /* main.m */; };
+		419575A61924AEAA0023480D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 419575A51924AEAA0023480D /* AppDelegate.m */; };
+		419575A91924AEAA0023480D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419575A71924AEAA0023480D /* Main.storyboard */; };
+		419575AC1924AEAA0023480D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419575AB1924AEAA0023480D /* ViewController.m */; };
+		419575AE1924AEAA0023480D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419575AD1924AEAA0023480D /* Images.xcassets */; };
+		419575B51924AEAA0023480D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 419575B41924AEAA0023480D /* XCTest.framework */; };
+		419575B61924AEAA0023480D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 419575951924AEAA0023480D /* Foundation.framework */; };
+		419575B71924AEAA0023480D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 419575991924AEAA0023480D /* UIKit.framework */; };
+		419575BF1924AEAA0023480D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 419575BD1924AEAA0023480D /* InfoPlist.strings */; };
+		419575C11924AEAA0023480D /* AnonymoResurrectedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 419575C01924AEAA0023480D /* AnonymoResurrectedTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		419575B81924AEAA0023480D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4195758A1924AEAA0023480D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 419575911924AEAA0023480D;
+			remoteInfo = AnonymoResurrected;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		419575921924AEAA0023480D /* AnonymoResurrected.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnonymoResurrected.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		419575951924AEAA0023480D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		419575971924AEAA0023480D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		419575991924AEAA0023480D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4195759D1924AEAA0023480D /* AnonymoResurrected-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnonymoResurrected-Info.plist"; sourceTree = "<group>"; };
+		4195759F1924AEAA0023480D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		419575A11924AEAA0023480D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		419575A31924AEAA0023480D /* AnonymoResurrected-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnonymoResurrected-Prefix.pch"; sourceTree = "<group>"; };
+		419575A41924AEAA0023480D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		419575A51924AEAA0023480D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		419575A81924AEAA0023480D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		419575AA1924AEAA0023480D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		419575AB1924AEAA0023480D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		419575AD1924AEAA0023480D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		419575B31924AEAA0023480D /* AnonymoResurrectedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnonymoResurrectedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		419575B41924AEAA0023480D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		419575BC1924AEAA0023480D /* AnonymoResurrectedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnonymoResurrectedTests-Info.plist"; sourceTree = "<group>"; };
+		419575BE1924AEAA0023480D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		419575C01924AEAA0023480D /* AnonymoResurrectedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnonymoResurrectedTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4195758F1924AEAA0023480D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419575981924AEAA0023480D /* CoreGraphics.framework in Frameworks */,
+				4195759A1924AEAA0023480D /* UIKit.framework in Frameworks */,
+				419575961924AEAA0023480D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		419575B01924AEAA0023480D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419575B51924AEAA0023480D /* XCTest.framework in Frameworks */,
+				419575B71924AEAA0023480D /* UIKit.framework in Frameworks */,
+				419575B61924AEAA0023480D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		419575891924AEAA0023480D = {
+			isa = PBXGroup;
+			children = (
+				4195759B1924AEAA0023480D /* AnonymoResurrected */,
+				419575BA1924AEAA0023480D /* AnonymoResurrectedTests */,
+				419575941924AEAA0023480D /* Frameworks */,
+				419575931924AEAA0023480D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		419575931924AEAA0023480D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				419575921924AEAA0023480D /* AnonymoResurrected.app */,
+				419575B31924AEAA0023480D /* AnonymoResurrectedTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		419575941924AEAA0023480D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				419575951924AEAA0023480D /* Foundation.framework */,
+				419575971924AEAA0023480D /* CoreGraphics.framework */,
+				419575991924AEAA0023480D /* UIKit.framework */,
+				419575B41924AEAA0023480D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4195759B1924AEAA0023480D /* AnonymoResurrected */ = {
+			isa = PBXGroup;
+			children = (
+				419575A41924AEAA0023480D /* AppDelegate.h */,
+				419575A51924AEAA0023480D /* AppDelegate.m */,
+				419575A71924AEAA0023480D /* Main.storyboard */,
+				419575AA1924AEAA0023480D /* ViewController.h */,
+				419575AB1924AEAA0023480D /* ViewController.m */,
+				419575AD1924AEAA0023480D /* Images.xcassets */,
+				4195759C1924AEAA0023480D /* Supporting Files */,
+			);
+			path = AnonymoResurrected;
+			sourceTree = "<group>";
+		};
+		4195759C1924AEAA0023480D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4195759D1924AEAA0023480D /* AnonymoResurrected-Info.plist */,
+				4195759E1924AEAA0023480D /* InfoPlist.strings */,
+				419575A11924AEAA0023480D /* main.m */,
+				419575A31924AEAA0023480D /* AnonymoResurrected-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		419575BA1924AEAA0023480D /* AnonymoResurrectedTests */ = {
+			isa = PBXGroup;
+			children = (
+				419575C01924AEAA0023480D /* AnonymoResurrectedTests.m */,
+				419575BB1924AEAA0023480D /* Supporting Files */,
+			);
+			path = AnonymoResurrectedTests;
+			sourceTree = "<group>";
+		};
+		419575BB1924AEAA0023480D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				419575BC1924AEAA0023480D /* AnonymoResurrectedTests-Info.plist */,
+				419575BD1924AEAA0023480D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		419575911924AEAA0023480D /* AnonymoResurrected */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419575C41924AEAA0023480D /* Build configuration list for PBXNativeTarget "AnonymoResurrected" */;
+			buildPhases = (
+				4195758E1924AEAA0023480D /* Sources */,
+				4195758F1924AEAA0023480D /* Frameworks */,
+				419575901924AEAA0023480D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnonymoResurrected;
+			productName = AnonymoResurrected;
+			productReference = 419575921924AEAA0023480D /* AnonymoResurrected.app */;
+			productType = "com.apple.product-type.application";
+		};
+		419575B21924AEAA0023480D /* AnonymoResurrectedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419575C71924AEAA0023480D /* Build configuration list for PBXNativeTarget "AnonymoResurrectedTests" */;
+			buildPhases = (
+				419575AF1924AEAA0023480D /* Sources */,
+				419575B01924AEAA0023480D /* Frameworks */,
+				419575B11924AEAA0023480D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				419575B91924AEAA0023480D /* PBXTargetDependency */,
+			);
+			name = AnonymoResurrectedTests;
+			productName = AnonymoResurrectedTests;
+			productReference = 419575B31924AEAA0023480D /* AnonymoResurrectedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4195758A1924AEAA0023480D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = sparktech;
+				TargetAttributes = {
+					419575B21924AEAA0023480D = {
+						TestTargetID = 419575911924AEAA0023480D;
+					};
+				};
+			};
+			buildConfigurationList = 4195758D1924AEAA0023480D /* Build configuration list for PBXProject "AnonymoResurrected" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 419575891924AEAA0023480D;
+			productRefGroup = 419575931924AEAA0023480D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				419575911924AEAA0023480D /* AnonymoResurrected */,
+				419575B21924AEAA0023480D /* AnonymoResurrectedTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		419575901924AEAA0023480D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419575AE1924AEAA0023480D /* Images.xcassets in Resources */,
+				419575A01924AEAA0023480D /* InfoPlist.strings in Resources */,
+				419575A91924AEAA0023480D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		419575B11924AEAA0023480D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419575BF1924AEAA0023480D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4195758E1924AEAA0023480D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419575AC1924AEAA0023480D /* ViewController.m in Sources */,
+				419575A61924AEAA0023480D /* AppDelegate.m in Sources */,
+				419575A21924AEAA0023480D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		419575AF1924AEAA0023480D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419575C11924AEAA0023480D /* AnonymoResurrectedTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		419575B91924AEAA0023480D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 419575911924AEAA0023480D /* AnonymoResurrected */;
+			targetProxy = 419575B81924AEAA0023480D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4195759E1924AEAA0023480D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4195759F1924AEAA0023480D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		419575A71924AEAA0023480D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				419575A81924AEAA0023480D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		419575BD1924AEAA0023480D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				419575BE1924AEAA0023480D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		419575C21924AEAA0023480D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		419575C31924AEAA0023480D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		419575C51924AEAA0023480D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnonymoResurrected/AnonymoResurrected-Prefix.pch";
+				INFOPLIST_FILE = "AnonymoResurrected/AnonymoResurrected-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		419575C61924AEAA0023480D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnonymoResurrected/AnonymoResurrected-Prefix.pch";
+				INFOPLIST_FILE = "AnonymoResurrected/AnonymoResurrected-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		419575C81924AEAA0023480D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AnonymoResurrected.app/AnonymoResurrected";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnonymoResurrected/AnonymoResurrected-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AnonymoResurrectedTests/AnonymoResurrectedTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		419575C91924AEAA0023480D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AnonymoResurrected.app/AnonymoResurrected";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnonymoResurrected/AnonymoResurrected-Prefix.pch";
+				INFOPLIST_FILE = "AnonymoResurrectedTests/AnonymoResurrectedTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4195758D1924AEAA0023480D /* Build configuration list for PBXProject "AnonymoResurrected" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				419575C21924AEAA0023480D /* Debug */,
+				419575C31924AEAA0023480D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		419575C41924AEAA0023480D /* Build configuration list for PBXNativeTarget "AnonymoResurrected" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				419575C51924AEAA0023480D /* Debug */,
+				419575C61924AEAA0023480D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		419575C71924AEAA0023480D /* Build configuration list for PBXNativeTarget "AnonymoResurrectedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				419575C81924AEAA0023480D /* Debug */,
+				419575C91924AEAA0023480D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4195758A1924AEAA0023480D /* Project object */;
+}
