@@ -33,6 +33,10 @@
 #define kWebsiteHomepageURL @"http://ipi.sparktechsoft.net"
 #define kTwitterPageURL @"http://twitter.com/ipi"
 
+//my constants
+#define kCreateGetRequestURLFormat @"http://89.45.249.251/Anonimo/%@"
+//my constants
+
 #define kPlaceWebSearchURLFormat @"http://ipi.sparktechsoft.net/api/v1/places/search?q=%@&gl_name=%@&auth_token=%@"
 #define kNearbyPlaceWebSearchURLFormat @"http://ipi.sparktechsoft.net/api/v1/places/nearby_search?lat=%f&lng=%f&auth_token=%@"
 #define kPlaceURLFormat @"http://ipi.sparktechsoft.net/api/v1/places/details?reference=%@&auth_token=%@&photos=true"

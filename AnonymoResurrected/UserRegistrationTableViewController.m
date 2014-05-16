@@ -9,7 +9,8 @@
 #import "UserRegistrationTableViewController.h"
 #import "Constants.h"
 #import "AppDelegate.h"
-
+#import "AppModel.h"
+#import "WorldMapViewController.h"
 
 
 
@@ -51,6 +52,8 @@
     self.confirmPasswordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.confirmPasswordTextField.placeholder attributes:@{NSForegroundColorAttributeName: color}];
 
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newUserCreatedWithSucces) name:[AppModel didCreateNewAccountNotificationName] object:[AppModel sharedModel]];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -62,6 +65,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Table view data source
@@ -154,8 +162,7 @@
 
 -(void)gestureFired:(UISwipeGestureRecognizer *)gesture
 {
-
-        [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -166,5 +173,28 @@
     }
     
     [self.activityIndicator startAnimating];
+    
+    NSDictionary *newUserDicitonary = @{@"name": @"Sparktech",
+                                       @"password": @"sparktech",
+                                       @"email":@"silviu.ion@sparktech.ro"};
+    NSLog(@"Request to add user started with dicitonary: %@", newUserDicitonary);
+    //AppModel *sharedModel = [AppModel sharedModel];
+    //[sharedModel createNewUserOnServerWithDictionary:newUserDicitonary];
+    [self newUserCreatedWithSucces];
+}
+
+#pragma Observers Handlers
+-(void)newUserCreatedWithSucces
+{
+
+    //UITabBarController *tabBarController = [UITabBarController alloc];
+   // tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainTabBarController"];
+   // self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+
+   // [self presentViewController:tabBarController animated:YES completion:nil];
+    //[self.navigationController pushViewController:tabBarController animated:YES];
+    [self performSegueWithIdentifier:@"PresentMainTabController" sender:self];
 }
 @end
+
+

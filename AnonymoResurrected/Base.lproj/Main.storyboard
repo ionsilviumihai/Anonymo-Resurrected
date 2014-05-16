@@ -135,6 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="497" y="165"/>
         </scene>
         <!--User Registration Table View Controller-->
         <scene sceneID="Z35-2v-fdl">
@@ -401,11 +402,12 @@
                         <outlet property="mailTextField" destination="KAZ-0b-guj" id="MHT-N0-Kyf"/>
                         <outlet property="nicknameTextField" destination="uAB-L2-xNS" id="uk5-dD-kAO"/>
                         <outlet property="passwordTextField" destination="JX6-rG-BLa" id="oNh-cs-1Nd"/>
+                        <segue destination="PT0-Gi-L0f" kind="modal" identifier="PresentMainTabController" modalTransitionStyle="flipHorizontal" id="RCE-EL-heu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USz-Hh-I0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942" y="79"/>
+            <point key="canvasLocation" x="1020" y="160"/>
         </scene>
         <!--View Controller - Settings-->
         <scene sceneID="YR3-MA-yB3">
@@ -422,10 +424,10 @@
             </objects>
             <point key="canvasLocation" x="2737" y="1796"/>
         </scene>
-        <!--View Controller - World Map-->
+        <!--World Map View Controller - World Map-->
         <scene sceneID="UWg-88-cbS">
             <objects>
-                <viewController id="Ccj-9f-szN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorldMapViewController" id="Ccj-9f-szN" customClass="WorldMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g6q-1l-qYR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -471,7 +473,7 @@
         <scene sceneID="fEg-7I-2mG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3fK-51-gF7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="WorldMap" id="RxX-If-ypg"/>
+                    <tabBarItem key="tabBarItem" title="WorldMap" image="tab.png" id="RxX-If-ypg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xdt-oI-tEb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -489,7 +491,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="7bs-uU-pFJ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PT0-Gi-L0f" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="PT0-Gi-L0f" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="QfU-8S-vL9">
@@ -511,7 +513,7 @@
         <scene sceneID="OPT-Uu-V4h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L1r-3F-B4b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" id="yEi-5M-Aco"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="tabCalendar.png" id="yEi-5M-Aco"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ABQ-z6-pC5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -530,7 +532,7 @@
         <scene sceneID="Wq6-aj-gfL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0uS-9G-4Ve" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messages" id="09K-JE-F1b"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="tabMessage.png" id="09K-JE-F1b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bsl-OS-O8b">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -549,7 +551,7 @@
         <scene sceneID="zYS-j3-knx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cks-b5-Sor" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="Hqz-WF-okZ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="tabSettings.png" id="Hqz-WF-okZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4CA-d9-zb1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -568,6 +570,10 @@
     <resources>
         <image name="button-arrow2.png" width="25" height="25"/>
         <image name="logo.png" width="160" height="156"/>
+        <image name="tab.png" width="32" height="32"/>
+        <image name="tabCalendar.png" width="32" height="32"/>
+        <image name="tabMessage.png" width="32" height="32"/>
+        <image name="tabSettings.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

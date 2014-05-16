@@ -7,8 +7,10 @@
 //
 
 #import "LoginViewController.h"
-#import "HttpRequests.h"
 #import "AppModel.h"
+
+
+
 
 @interface LoginViewController ()
 
@@ -18,11 +20,14 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"username"]) {
         self.userTextField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
     }
     
-    [super viewDidLoad];
+    
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -33,8 +38,11 @@
 }
 
 - (IBAction)loginUserPressed:(id)sender {
+    
     AppModel *sharedModel = [AppModel sharedModel];
     
+    sharedModel.usersFromServer = nil;
+
     __block BOOL areUserAndPasswordValide = NO;
     
     [self.userTextField resignFirstResponder];
@@ -61,11 +69,13 @@
     else
     {
         //luam toti userii din baza de date
-        [HttpRequests getAllUserssuccess:^(id data) {
-            for (NSDictionary* userInfo in data)
+        [sharedModel sendGetRequestWithRelativeURL:nil
+                                              data:nil
+                                            succes:^(NSHTTPURLResponse *httpRequest, id response)
+        {
+            for (NSDictionary* userInfo in response)
             {
-                NSLog(@"%@", userInfo);
-                [sharedModel.users addObject:userInfo];
+                [sharedModel.usersFromServer addObject:userInfo];
                 
                 if ([self.userTextField.text isEqualToString:[userInfo objectForKey:@"name"]])
                 {
@@ -81,29 +91,42 @@
                         [sharedModel.userLoggedIn setObject:userInfo[@"password"] forKey:@"password"];
                         NSLog(@"S-a copiat in shared dicitonary: %@", sharedModel.userLoggedIn);
                         areUserAndPasswordValide = YES;
+                        [self loginUserWasSuccessful];
                     }
                 }
             }
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if (!areUserAndPasswordValide) {
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication error" message:@"Email/Password combination is not valid." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-                    [alert show];
-                }
-            });
-            
-        }];
-
+            if (!areUserAndPasswordValide) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication error" message:@"Email/Password combination is not valid." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+                [alert show];
+            }
+        }
+                                             error:^(NSHTTPURLResponse *httpRequest)
+        {
+                    NSLog(@"S-a primit eroarea: %ld", (long)[httpRequest statusCode]);
+        }
+         ];
     }
-
 }
 
-- (IBAction)loginWithTwitterPressed:(id)sender {
+- (IBAction)loginWithTwitterPressed:(id)sender
+{
 }
 
-- (IBAction)loginWithFacebookPressed:(id)sender {
+- (IBAction)loginWithFacebookPressed:(id)sender
+{
+    FBLoginView *loginView = [[FBLoginView alloc] init];
+//    loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), 5);
+    //[self.view addSubview:loginView];
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    // The user has initiated a login, so call the openSession method
+    // and show the login UX if necessary.
+    [appDelegate setDelegate:self];
+    [appDelegate openSessionWithAllowLoginUI:YES];
 }
 
-- (IBAction)loginWithGooglePlusPressed:(id)sender {
+- (IBAction)loginWithGooglePlusPressed:(id)sender
+{
 }
 
 #pragma mark TextField Delegates
@@ -112,4 +135,13 @@
     [textField resignFirstResponder];
     return  YES;
 }
+
+#pragma Observers Handlers
+
+-(void)loginUserWasSuccessful
+{
+    [self performSegueWithIdentifier:@"PresentMainTabController" sender:self];
+}
+
+
 @end

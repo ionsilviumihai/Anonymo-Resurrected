@@ -7,9 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
+
+extern NSString *const FBSessionStateChangedNotification;
+@protocol FBLoginDelegate <NSObject>
+
+-(void)LoginWasSuccesfull:(BOOL) success;
+
+@end
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) id<FBLoginDelegate> delegate;
+
+- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI;
+
+- (void)logOutSession;
 
 @end
